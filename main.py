@@ -1,10 +1,13 @@
 import pygame
+import math
 # Settings file
 from settings import *
 # Player's class
 from player import Player
 # FPS drawing
 from fps import *
+# Map module
+from map import *
 
 # Initializing pygame module
 pygame.init()
@@ -28,11 +31,19 @@ while True:
     # Clear screen
     window.fill(WHITE)
 
-    # Physics here
+    ### Physics here
     player.movement(elapsedTime)
 
-    # Draw here
+    ### Draw here
+
+    # Draw player
     pygame.draw.circle(window, BLACK, player.position, 10)
+    # Draw line of view
+    pygame.draw.line(window, RED, player.position, (player.position.x + WIDTH * math.cos(player.angle),
+                                                    player.position.y + HEIGHT * math.sin(player.angle)))
+
+    for x, y in world_map:
+        pygame.draw.rect(window, BLUE, (x, y, TILE, TILE), 2)
 
     # FPS drawing (don't touch it if you don't know how it's works)
     elapsedTime, frameTime = fpsDrawing(frameTime, window)

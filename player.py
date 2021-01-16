@@ -1,4 +1,5 @@
 import pygame
+from settings import *
 
 class Player:
     def __init__(self, position, angle, speed):
@@ -18,3 +19,7 @@ class Player:
             self.position.x -= self.speed * elapsedTime
         if keys[pygame.K_d]:
             self.position.x += self.speed * elapsedTime
+        if keys[pygame.K_LEFT]:
+            self.angle -= playerRotationSpeed
+        if keys[pygame.K_RIGHT]:
+            self.angle += playerRotationSpeed
