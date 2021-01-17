@@ -34,7 +34,7 @@ while True:
     window.fill(BLACK)
 
     ### Physics here
-    player.movement(elapsedTime)
+    player.movement()
 
     ### Draw here
 
@@ -48,8 +48,8 @@ while True:
     # Raycasting draw
     ray_casting(window, player.position, player.angle)
 
-    # FPS drawing (don't touch it if you don't know how it's works)
-    elapsedTime, frameTime = fpsDrawing(frameTime, window)
+    # Draw FPS on screen
+    fpsDrawing(window, clock)
 
     # Draw everything on screen
     pygame.display.flip()

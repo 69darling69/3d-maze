@@ -23,7 +23,7 @@ def ray_casting(window, playerPosition, playerAngle):
                 # Calculate height of rectangle to draw
                 projectionHeight = PROJECTION_COEFFIENCE / depth
                 # Calculate color based on distance
-                color = 255 / (1 + depth**2 * .0001)
+                color = 255 / (1 + depth**2 * .0002)
                 # Draw rectangle
                 pygame.draw.rect(window, (color, color, color), (ray * SCALE, HEIGHT/2 - projectionHeight // 2, SCALE, projectionHeight))
                 break

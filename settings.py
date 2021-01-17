@@ -12,13 +12,14 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
 # Player's settings
-playerSpeed = .02
-playerRotationSpeed = .02
+playerSpeed = 2
+playerRotationSpeed = .03
 
 # Frames per second
 FPS = 60
 FPSposition = (0, 0)
 FPScolor = BLACK
+FPSbackground = WHITE
 FPSsize = 30
 FPSfontName = 'Comic Sans MS'
 
