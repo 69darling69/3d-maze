@@ -34,7 +34,7 @@ while True:
     window.fill(BLACK)
 
     ### Physics here
-    player.movement()
+    player.movement(clock.get_fps())
 
     ### Draw here
 

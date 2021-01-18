@@ -12,11 +12,11 @@ GREEN = (0, 255, 0)
 BLUE = (0, 0, 255)
 
 # Player's settings
-playerSpeed = 2
+playerSpeed = .1
 playerRotationSpeed = .03
 
 # Frames per second
-FPS = 60
+FPS = 0
 FPSposition = (0, 0)
 FPScolor = BLACK
 FPSbackground = WHITE
